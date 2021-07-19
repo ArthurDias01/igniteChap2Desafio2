@@ -1,6 +1,12 @@
+import { HTMLProps } from 'react';
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps extends HTMLProps<HTMLDivElement> {
+  isFilled: boolean;
+  isFocused: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   align-items: center;
 
